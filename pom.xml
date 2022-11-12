@@ -2,18 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>edu.eci.pdsw.samples</groupId>
-    <artifactId>PDSW-2018-1-par2t</artifactId>
+    <groupId>biblioteca.backend</groupId>
+    <artifactId>proyectoCVDS2022</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>PDSW-2018-1-par2t</name>
+    <name>proyectoCVDS2022</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>        
-                
+    </properties>
+
     <dependencies>
 
 
@@ -91,7 +91,7 @@
             <artifactId>apache-log4j-extras</artifactId>
             <version>1.2.17</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -103,14 +103,14 @@
 
 
     </dependencies>
-    
-    
-    
+
+
+
 
     <build>
         <plugins>
-            
-            
+
+
             <!-- clean project (also local H2 database)-->
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -125,45 +125,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
-            <!-- create local H2 database -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>sql-maven-plugin</artifactId>
-                <version>1.5</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId> 
-                        <version>1.4.184</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <driver>org.h2.Driver</driver>                    
-                    <url>jdbc:h2:file:./target/db/testdb;MODE=MYSQL</url>
-                    <username>anonymous</username>
-                    <password>anonymous</password>
-                    <autocommit>false</autocommit>
-                    <skip>${maven.test.skip}</skip>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>create-db</id>
-                        <phase>process-test-resources</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <srcFiles>                                
-                                <srcFile>tables.sql</srcFile>                                
-                            </srcFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            
-            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -179,7 +140,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.3.2</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -209,7 +170,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <!-- Tomcat embedded plugin. -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -221,7 +182,7 @@
                 </configuration>
             </plugin>
 
-            
+
         </plugins>
     </build>
     <repositories>
