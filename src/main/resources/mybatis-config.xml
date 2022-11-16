@@ -11,7 +11,7 @@
     </properties>
 
     <typeAliases>
-        <typeAlias type="biblioteca.backend.entities.recurso" alias="Recurso"/>
+        <typeAlias type="biblioteca.backend.entities.recurso" alias="recurso"/>
     </typeAliases>
 
     <environments default="development">

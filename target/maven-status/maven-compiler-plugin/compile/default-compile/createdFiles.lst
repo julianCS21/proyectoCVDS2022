@@ -1,2 +1,15 @@
+biblioteca\backend\guice\GuiceContextListener$1.class
+biblioteca\backend\persistence\PersistenceException.class
+biblioteca\backend\services\ServiciosRecursos.class
+biblioteca\backend\managedbeans\recursoBean.class
 biblioteca\backend\entities\usuario.class
-biblioteca\backend\entities\recursos.class
+biblioteca\backend\managedbeans\BasePageBean.class
+biblioteca\backend\persistence\mybatisimpl\MyBatisDAORecurso.class
+biblioteca\backend\services\ExcepcionServiciosRecurso.class
+biblioteca\backend\entities\recurso.class
+biblioteca\backend\guice\GuiceContextListener.class
+biblioteca\backend\persistence\DaoRecurso.class
+biblioteca\backend\services\impl\ServiciosRecursoImpl.class
+biblioteca\backend\services\ServiciosRecursosFactory$1.class
+biblioteca\backend\services\ServiciosRecursosFactory.class
+biblioteca\backend\persistence\mybatisimpl\mappers\recursoMapper.class

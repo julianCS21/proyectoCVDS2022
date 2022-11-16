@@ -23,6 +23,7 @@ public class recursoBean extends BasePageBean {
 
     public List<recurso> obtenerRecurso() throws PersistenceException{
         try{
+
             return sr.obtenerRecurso();
         }catch (ExcepcionServiciosRecurso e){
             throw new PersistenceException("Error al buscar los recursos", e);

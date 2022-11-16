@@ -11,30 +11,6 @@
     </select>
 
 
-    <select id="obtenerRecursoPorTipo" resultMap="recursoResult">
-        SELECT *
-        FROM recursos AS r
-        WHERE tipo = #{tipo}
-    </select>
-
-
-    <select id="obtenerRecursoPorCapacidad" resultMap="recursoResult">
-        SELECT *
-        FROM recursos AS r
-        WHERE capacidad = #{capacidad}
-    </select>
-
-
-    <select id="obtenerRecursoPorUbicacion" resultMap="recursoResult">
-        SELECT *
-        FROM recursos AS r
-        WHERE tipo = #{ubicacion}
-    </select>
-
-
-
-
-
     <resultMap id="recursoResult" type="recurso">
         <result property="id" column="id_recurso"/>
         <result property="nombre" column="nombre"/>

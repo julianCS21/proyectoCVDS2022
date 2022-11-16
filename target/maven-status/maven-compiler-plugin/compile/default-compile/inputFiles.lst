@@ -1,2 +1,13 @@
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\recursos.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\PersistenceException.java
 D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\usuario.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\MyBatisDAORecurso.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursos.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\impl\ServiciosRecursoImpl.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\mappers\recursoMapper.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ExcepcionServiciosRecurso.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\recurso.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursosFactory.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\BasePageBean.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\recursoBean.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\guice\GuiceContextListener.java
+D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\DaoRecurso.java

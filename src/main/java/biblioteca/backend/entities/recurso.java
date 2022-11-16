@@ -6,20 +6,51 @@ public class recurso {
 
     private String nombre;
 
+    private String ubicacion;
+    
+    private String tipo;
+
     private int capacidad;
 
-    private String ubicacion;
+    private String descripcion;
 
-    private boolean reservado;
+    private int disponible;
 
-    public recurso(int id, String nombre, int capacidad, String ubicacion, boolean reservado){
+
+
+    public recurso(int id, String nombre, String ubicacion, String tipo, int capacidad, String descripcion , int disponible){
         this.id = id;
         this.nombre = nombre;
-        this.capacidad = capacidad;
         this.ubicacion = ubicacion;
-        this.reservado = reservado;
+        this.tipo = tipo;
+        this.capacidad = capacidad;
+        this.descripcion = descripcion;
+        this.disponible = disponible;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(int disponible) {
+        this.disponible = disponible;
+    }
 
     public int getId() {
         return id;
@@ -53,11 +84,10 @@ public class recurso {
         this.ubicacion = ubicacion;
     }
 
-    public boolean isReservado() {
-        return reservado;
-    }
 
-    public void setReservado(boolean reservado) {
-        this.reservado = reservado;
+    @Override
+    public String toString(){
+        return "id : " + this.id + "nombre : " + this.nombre + "ubicacion: " + this.ubicacion + "tipo: " + this.tipo + "capacidad: " + this.capacidad + "descripcion: " + this.descripcion + "disponible: " + this.disponible;
+
     }
 }
