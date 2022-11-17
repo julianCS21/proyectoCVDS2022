@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="PDSW-2018-1-par2t" />
         <module name="master" />
+        <module name="proyectoCVDS2022" />
       </profile>
     </annotationProcessing>
   </component>
@@ -15,6 +16,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="PDSW-2018-1-par2t" options="-endorseddirs D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\target/endorsed" />
       <module name="master" options="-endorseddirs D:\Users\Julian\Documents\Universidad\CVDS\Proyecto\master\target/endorsed" />
+      <module name="proyectoCVDS2022" options="-endorseddirs C:\Users\camil\Desktop\proyecto\proyectoCVDS2022\target/endorsed" />
     </option>
   </component>
 </project>
