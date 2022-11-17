@@ -12,6 +12,7 @@
 
     <typeAliases>
         <typeAlias type="biblioteca.backend.entities.recurso" alias="recurso"/>
+        <typeAlias type="biblioteca.backend.entities.usuario" alias="usuario"/>
     </typeAliases>
 
     <environments default="development">
@@ -29,6 +30,7 @@
 
     <mappers>
         <mapper resource="mappers/recursoMapper.xml"></mapper>
+        <mapper resource="mappers/usuarioMapper.xml"></mapper>
     </mappers> 
         
         

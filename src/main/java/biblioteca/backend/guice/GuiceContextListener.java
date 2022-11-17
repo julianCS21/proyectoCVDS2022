@@ -5,9 +5,13 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import biblioteca.backend.persistence.DaoRecurso;
+import biblioteca.backend.persistence.DaoUsuario;
 import biblioteca.backend.persistence.mybatisimpl.MyBatisDAORecurso;
+import biblioteca.backend.persistence.mybatisimpl.MyBatisDAOUsuario;
 import biblioteca.backend.services.ServiciosRecursos;
+import biblioteca.backend.services.ServiciosUsuarios;
 import biblioteca.backend.services.impl.ServiciosRecursoImpl;
+import biblioteca.backend.services.impl.ServiciosUsuarioImpl;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 import com.google.inject.Guice;
@@ -32,6 +36,10 @@ public class GuiceContextListener implements ServletContextListener {
                 setClassPathResource("mybatis-config.xml");
                 bind(ServiciosRecursos.class).to(ServiciosRecursoImpl.class);
                 bind(DaoRecurso.class).to(MyBatisDAORecurso.class);
+
+                bind(ServiciosUsuarios.class).to(ServiciosUsuarioImpl.class);
+                bind(DaoUsuario.class).to(MyBatisDAOUsuario.class);
+
 
 
             }

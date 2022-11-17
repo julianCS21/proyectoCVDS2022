@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PDSW-2018-1-par2t" />
+        <module name="master" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="PDSW-2018-1-par2t" options="-endorseddirs D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\target/endorsed" />
+      <module name="master" options="-endorseddirs D:\Users\Julian\Documents\Universidad\CVDS\Proyecto\master\target/endorsed" />
     </option>
   </component>
 </project>

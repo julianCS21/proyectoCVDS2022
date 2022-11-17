@@ -2,7 +2,7 @@ package biblioteca.backend.entities;
 
 public class usuario {
 
-    private int id;
+    private int carnet;
 
     private String correo;
 
@@ -10,18 +10,26 @@ public class usuario {
 
     private String rol;
 
-    private String contra;
+    private String contraseña;
 
-    private String programa;
+    private String carrera;
 
 
-    public usuario(int id,String nombre, String rol, String contra, String programa){
-        this.id = id;
+    public usuario(int carnet, String nombre, String rol, String contraseña, String carrera, String correo) {
+        this.carnet = carnet;
         this.nombre = nombre;
+        this.correo = correo;
+        this.contraseña = contraseña;
         this.rol = rol;
-        this.contra = contra;
-        this.programa = programa;
+        this.carrera = carrera;
+    }
 
+    public int getCarnet() {
+        return carnet;
+    }
+
+    public void setCarnet(int carnet) {
+        this.carnet = carnet;
     }
 
     public String getCorreo() {
@@ -48,27 +56,25 @@ public class usuario {
         this.rol = rol;
     }
 
-    public String getContra() {
-        return contra;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setContra(String contra) {
-        this.contra = contra;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
-    public String getPrograma() {
-        return programa;
+    public String getCarrera() {
+        return carrera;
     }
 
-    public void setPrograma(String programa) {
-        this.programa = programa;
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString(){
+        return "carnet : " + this.carnet + " nombre : " + this.nombre + " contraseña: " + this.contraseña + " correo: " + this.correo + " rol: " + this.rol + " carrera: " + this.carrera;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 }
