@@ -1,6 +1,8 @@
 package biblioteca.backend.services;
 
 
+import biblioteca.backend.autenticacion.SessionLogger;
+import biblioteca.backend.autenticacion.ShiroSession;
 import biblioteca.backend.entities.usuario;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
@@ -37,6 +39,7 @@ public class ServiciosUsuariosFactory {
                                           setClassPathResource("mybatis-config.xml");
                                           bind(ServiciosUsuarios.class).to(ServiciosUsuarioImpl.class);
                                           bind(DaoUsuario.class).to(MyBatisDAOUsuario.class);
+                                          bind(SessionLogger.class).to(ShiroSession.class);
 
                                       }
 

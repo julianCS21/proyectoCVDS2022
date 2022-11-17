@@ -4,6 +4,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import biblioteca.backend.autenticacion.SessionLogger;
+import biblioteca.backend.autenticacion.ShiroSession;
 import biblioteca.backend.persistence.DaoRecurso;
 import biblioteca.backend.persistence.DaoUsuario;
 import biblioteca.backend.persistence.mybatisimpl.MyBatisDAORecurso;
@@ -39,6 +41,7 @@ public class GuiceContextListener implements ServletContextListener {
 
                 bind(ServiciosUsuarios.class).to(ServiciosUsuarioImpl.class);
                 bind(DaoUsuario.class).to(MyBatisDAOUsuario.class);
+                bind(SessionLogger.class).to(ShiroSession.class);
 
 
 
