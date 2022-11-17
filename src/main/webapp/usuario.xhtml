@@ -1,1 +1,109 @@
-<h1>PAGINA DE USUARIO</h1>
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:o="http://omnifaces.org/ui"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>Document</title>
+    <style>
+
+    body{
+        font-family: 'Quicksand', sans-serif;
+        background: linear-gradient(rgba(5,7,12,0.65),rgba(5,7,12,0.65)),
+        url(fondo.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    header{
+        display: flex;
+        height: 70px;
+        background-color: #a81d32;
+        justify-content: space-between;
+        border-radius: 10px;
+        align-items: center;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        margin-top: 12px;
+        height: 79px;
+    }
+    .logo h2{
+        margin-left: 50px;
+        color: white;
+    }
+    nav a{
+        font-weight: 600;
+        padding-right: 10px;
+    }
+    nav a:hover{
+        color: gray;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .input {
+        background: #8a4b54;
+        border-radius: 8px;
+        height: 30px;
+        width: 500px;
+        font-size: var(--md);
+        padding: 6px;
+        margin-bottom: 12px;
+    }
+    .primary-button {
+        background: #a81d32;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+        height: 40px;
+    }
+
+
+    .buscador{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .commandButton{
+    background: #a81d32;
+    }
+    </style>
+
+</h:head>
+<h:body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt=""></img>
+            <h2 class="titulo">Consultar Recursos</h2>
+        </div>
+        <nav>
+            <a href="" class="nav-link">Cuenta</a>
+            <a href="https://outlook.office365.com/" class="nav-link">Correo</a>
+            <a href="https://www.escuelaing.edu.co/es/" class="nav-link">Página Principal</a>
+        </nav>
+    </header>
+    <div class="buscador">
+        <h:form action="disponible.html" class="form">
+            <p:inputText type="text" id="Buscador" placeholder="EJ: Calculo" class="input input-user"></p:inputText>
+
+            <p:commandButton value="Buscar" class="primary-button login-button"></p:commandButton>
+        </h:form>
+    </div>
+</h:body>
+</html>
