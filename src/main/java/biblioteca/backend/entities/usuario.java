@@ -2,17 +2,17 @@ package biblioteca.backend.entities;
 
 public class usuario {
 
-    private int carnet;
+    protected int carnet;
 
-    private String correo;
+    protected String correo;
 
-    private String nombre;
+    protected String nombre;
 
-    private String rol;
+    protected String rol;
 
-    private String contraseña;
+    protected String contraseña;
 
-    private String carrera;
+    protected String carrera;
 
 
     public usuario(int carnet, String nombre, String rol, String contraseña, String carrera, String correo) {

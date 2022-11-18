@@ -14,22 +14,27 @@
     <select id="obtenerRecursoPorTipo" resultMap="recursoResult">
         SELECT *
         FROM recursos AS r
-        WHERE tipo = #{tipo}
+        WHERE r.tipo = #{tipo}
     </select>
 
 
     <select id="obtenerRecursoPorCapacidad" resultMap="recursoResult">
         SELECT *
         FROM recursos AS r
-        WHERE capacidad = #{capacidad}
+        WHERE r.capacidad = #{capacidad}
     </select>
 
 
     <select id="obtenerRecursoPorUbicacion" resultMap="recursoResult">
         SELECT *
         FROM recursos AS r
-        WHERE tipo = #{ubicacion}
+        WHERE r.ubicacion = #{ubicacion}
     </select>
+    
+    <insert id="añadirRecurso" parameterType="map" >
+        INSERT INTO recursos (id_recurso,nombre,ubicacion,tipo,capacidad,descripcion,disponible)
+        VALUES (#{recurso.id},#{recurso.nombre},#{recurso.ubicacion},#{tipo},#{capacidad},#{descripcion},#{disponible})
+    </insert>
 
 
 
