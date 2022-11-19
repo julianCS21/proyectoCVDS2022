@@ -21,6 +21,8 @@ public interface recursoMapper {
 
     public List<recurso> obtenerRecursoPorUbicacion(@Param("ubicacion") String ubicacion);
 
+    public void añadirRecurso(@Param("recurso") recurso r);
+
 
 
 }

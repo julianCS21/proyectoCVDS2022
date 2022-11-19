@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:o="http://omnifaces.org/ui"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+
+    <h:form id="administrador" >
+
+        <p:inputText type="int" placeholder="id"  value="#{administrador.id}"></p:inputText>
+
+        <p:inputText  placeholder="nombre"  value="#{administrador.nombre}"></p:inputText>
+
+        <p:inputText  placeholder="ubicacion"  value="#{administrador.ubicacion}"></p:inputText>
+
+        <p:inputText  placeholder="tipo"  value="#{administrador.tipo}"></p:inputText>
+
+        <p:inputText  placeholder="capacidad"  value="#{administrador.capacidad}"></p:inputText>
+
+        <p:inputText  placeholder="descripcion"  value="#{administrador.descripcion}"></p:inputText>
+
+        <p:inputText  placeholder="disponible" value="#{administrador.disponible}"></p:inputText>
+
+        <p:commandButton value="Añadir" actionListener="#{administrador.añadirRecurso}" update="administrador"></p:commandButton>
+    </h:form>
+</h:body>
+</html>

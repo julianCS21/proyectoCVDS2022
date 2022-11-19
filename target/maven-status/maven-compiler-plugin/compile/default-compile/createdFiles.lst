@@ -10,6 +10,7 @@ biblioteca\backend\guice\GuiceContextListener$1.class
 biblioteca\backend\services\ServiciosUsuarios.class
 biblioteca\backend\services\ServiciosUsuariosFactory$1.class
 biblioteca\backend\autenticacion\ShiroSession.class
+biblioteca\backend\managedbeans\administradorBean.class
 biblioteca\backend\services\ServiciosRecursos.class
 biblioteca\backend\managedbeans\recursoBean.class
 biblioteca\backend\persistence\mybatisimpl\mappers\usuarioMapper.class

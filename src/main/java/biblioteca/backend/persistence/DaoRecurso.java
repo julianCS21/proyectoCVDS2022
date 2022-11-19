@@ -14,5 +14,7 @@ public interface DaoRecurso {
 
     public List<recurso>  loadByUbication(String ubicacion) throws PersistenceException;
 
+    public void add(recurso r) throws PersistenceException;
+
 
 }

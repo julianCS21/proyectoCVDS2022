@@ -15,6 +15,8 @@ import java.util.List;
 
 @ManagedBean(name = "usuario")
 
+
+@SessionScoped
 public class usuarioBean extends BasePageBean {
 
 

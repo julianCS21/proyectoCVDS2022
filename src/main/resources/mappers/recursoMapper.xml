@@ -33,7 +33,7 @@
     
     <insert id="añadirRecurso" parameterType="map" >
         INSERT INTO recursos (id_recurso,nombre,ubicacion,tipo,capacidad,descripcion,disponible)
-        VALUES (#{recurso.id},#{recurso.nombre},#{recurso.ubicacion},#{tipo},#{capacidad},#{descripcion},#{disponible})
+        VALUES (#{recurso.id},#{recurso.nombre},#{recurso.ubicacion},#{recurso.tipo},#{recurso.capacidad},#{recurso.descripcion},#{recurso.disponible})
     </insert>
 
 

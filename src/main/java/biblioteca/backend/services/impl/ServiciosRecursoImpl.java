@@ -59,4 +59,15 @@ public class ServiciosRecursoImpl  implements ServiciosRecursos {
 
         }
     }
+
+    @Override
+    public void añadirRecurso(recurso r) throws ExcepcionServiciosRecurso {
+        try{
+            daoRecurso.add(r);
+        } catch (PersistenceException ex) {
+            throw new ExcepcionServiciosRecurso("Error al añadir :"+ex.getLocalizedMessage(), ex);
+
+        }
+
+    }
 }

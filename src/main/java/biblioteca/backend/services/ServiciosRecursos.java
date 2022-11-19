@@ -14,4 +14,6 @@ public interface ServiciosRecursos {
     public List<recurso> obtenerRecursoPorCapacidad(int capacidad) throws ExcepcionServiciosRecurso;
 
     public List<recurso> obtenerRecursoPorUbicacion(String ubicacion) throws ExcepcionServiciosRecurso;
+
+    public void añadirRecurso(recurso r) throws  ExcepcionServiciosRecurso;
 }

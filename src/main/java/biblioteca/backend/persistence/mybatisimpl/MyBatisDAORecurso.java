@@ -48,4 +48,13 @@ public class MyBatisDAORecurso implements DaoRecurso {
             throw new PersistenceException("error al consultar los recursos:" + e.getLocalizedMessage(),e);
         }
     }
+
+    @Override
+    public void add(recurso r) throws PersistenceException {
+        try{
+            rm.añadirRecurso(r);
+        }catch (Exception e){
+            throw new PersistenceException("error al añadir  recurso:" + e.getLocalizedMessage(),e);
+        }
+    }
 }
