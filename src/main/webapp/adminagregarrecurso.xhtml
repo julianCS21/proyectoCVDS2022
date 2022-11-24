@@ -5,24 +5,113 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:o="http://omnifaces.org/ui"
       xmlns:p="http://primefaces.org/ui">
-<h:head></h:head>
+<h:head>
+<style>
+    body{
+        font-family: 'Quicksand', sans-serif;
+        background: linear-gradient(rgba(5,7,12,0.65),rgba(5,7,12,0.65)),
+        url(fondo.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    .menu{
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .fondo{
+      background: #a81d32;
+      border-radius: 30px;
+      display: grid;
+      place-items: center;
+      height: 600px;
+      width: 600px;
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        margin-right: 12px;
+    }
+    header{
+        display: flex;
+        height: 70px;
+        background-color: #a81d32;
+        justify-content: space-between;
+        border-radius: 10px;
+        align-items: center;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        margin-top: 12px;
+        height: 79px;
+    }
+    .logo h2{
+        margin-left: 50px;
+        color: white;
+    }
+    .form {
+      background: #a81d32;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+      t
+    }
+    label {
+      background: #a81d32;
+      margin-bottom: 4px;
+      color: white;
+      margin-top: 8px;
+    }
+    button.ui-button{
+      margin-top: 8px;
+      background: #8a4b54;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      border-color: black;
+      overflow: hidden;
+    }
+
+</style>
+</h:head>
 <h:body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt=""></img>
+            <h2 class="titulo">Agregar Recursos</h2>
+        </div>
+        <nav>
+            <a href="index.xhtml" class="nav-link">Administrador</a>
+            <a href="administrador.xhtml" class="nav-link">Menú</a>
 
-    <h:form id="administrador" >
-        <p:inputText type="int" placeholder="id"  value="#{administrador.id}"></p:inputText>
-
-        <p:inputText  placeholder="nombre"  value="#{administrador.nombre}"></p:inputText>
-
-        <p:inputText  placeholder="ubicacion"  value="#{administrador.ubicacion}"></p:inputText>
-
-        <p:inputText  placeholder="tipo"  value="#{administrador.tipo}"></p:inputText>
-
-        <p:inputText  placeholder="capacidad"  value="#{administrador.capacidad}"></p:inputText>
-
-        <p:inputText  placeholder="descripcion"  value="#{administrador.descripcion}"></p:inputText>git co
-
-        <p:inputText  placeholder="disponible" value="#{administrador.disponible}"></p:inputText>
-        <p:commandButton value="Añadir" actionListener="#{administrador.añadirRecurso}" update="administrador"></p:commandButton>
-    </h:form>
+        </nav>
+    </header>
+    <div class="menu">
+        <div class="fondo">
+            <h:form id="administrador" class="form">
+                <label class="label">Id</label>
+                <p:inputText type="int" placeholder="id"  value="#{administrador.id}"></p:inputText>
+                <label class="label">Nombre</label>
+                <p:inputText  placeholder="nombre"  value="#{administrador.nombre}"></p:inputText>
+                <label class="label">Ubicación</label>
+                <p:inputText  placeholder="ubicacion"  value="#{administrador.ubicacion}"></p:inputText>
+                <label class="label">Tipo</label>
+                <p:inputText  placeholder="tipo"  value="#{administrador.tipo}"></p:inputText>
+                <label class="label">Capacidad</label>
+                <p:inputText  placeholder="capacidad"  value="#{administrador.capacidad}"></p:inputText>
+                <label class="label">Descripción</label>
+                <p:inputText  placeholder="descripcion"  value="#{administrador.descripcion}"></p:inputText>
+                <label class="label">Disponible</label>
+                <p:inputText  placeholder="disponible" value="#{administrador.disponible}"></p:inputText>
+                <p:commandButton value="Añadir" actionListener="#{administrador.añadirRecurso}" update="administrador"></p:commandButton>
+            </h:form>
+        </div>
+    </div>
 </h:body>
 </html>

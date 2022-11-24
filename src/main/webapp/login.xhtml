@@ -9,7 +9,7 @@
     <meta charset="UTF-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-    <title>Document</title>
+    <title>Login</title>
     <style>
 *{
   background: linear-gradient(rgba(5,7,12,0.65),rgba(5,7,12,0.65)),
@@ -68,16 +68,20 @@ body {
   padding: 6px;
   margin-bottom: 12px;
 }
-.primary-button{
+button.ui-button{
+  background: #8a4b54;
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
   font-weight: bold;
   height: 40px;
+  border-color: black;
+  overflow: hidden;
 }
 .login-button {
   margin-top: 14px;
   margin-bottom: 30px;
+  background: #8a4b54;
 }
   </style>
 </h:head>
@@ -86,7 +90,7 @@ body {
         <div class="fondo">
             <img src="logo2.png" alt="logo" class="logo"></img>
             <h1 class="titulo">Iniciar sesión</h1>
-            <p class="subtitulo">Ingresa para consultar recursos de la biblioteca</p>
+            <p class="subtitulo">Ingresa cuenta personal para solicitar o cuenta de administrador: </p>
 
             <h:form id="usuarios" class="form">
                 <label class="label">Usuario</label>
@@ -95,7 +99,7 @@ body {
                 <label class="label">Contraseña</label>
                 <p:inputText type="password" id="password" placeholder="*********" class="input input-password" value="#{usuario.contraseña}"></p:inputText>
 
-                <p:commandButton value="Iniciar" class="primary-button login-button" actionListener="#{usuario.login}" update="usuarios"></p:commandButton>
+                <p:commandButton value="Iniciar" class="login-button" actionListener="#{usuario.login}" update="usuarios"></p:commandButton>
             </h:form>
         </div>
     </div>
