@@ -1,6 +1,7 @@
 package biblioteca.backend.managedbeans;
 
 import biblioteca.backend.entities.recurso;
+import biblioteca.backend.entities.tipoDeBusquedas;
 import biblioteca.backend.persistence.PersistenceException;
 import biblioteca.backend.services.ExcepcionServiciosRecurso;
 import biblioteca.backend.services.ServiciosRecursos;
@@ -14,12 +15,65 @@ import java.util.List;
 @ManagedBean(name = "recurso")
 
 
+
+
 @SessionScoped
 public class recursoBean extends BasePageBean {
 
     @Inject
     private ServiciosRecursos sr;
 
+    private String consulta;
+
+    private List<recurso> recursosConsultados;
+
+
+    public List<recurso> getRecursosConsultados() {
+        return recursosConsultados;
+    }
+
+    public void setRecursosConsultados(List<recurso> recursosConsultados) {
+        this.recursosConsultados = recursosConsultados;
+    }
+
+    tipoDeBusquedas tp = tipoDeBusquedas.TODO;
+
+    public ServiciosRecursos getSr() {
+        return sr;
+    }
+
+    public tipoDeBusquedas[] getTiposBusquedas() {
+        return tipoDeBusquedas.values();
+    }
+
+    public void setSr(ServiciosRecursos sr) {
+        this.sr = sr;
+    }
+
+    public tipoDeBusquedas getTp() {
+        return tp;
+    }
+
+    public void setTp(tipoDeBusquedas tp) {
+        this.tp = tp;
+    }
+
+
+    public void consulta() throws PersistenceException {
+        if(this.tp == tipoDeBusquedas.TODO){
+            setRecursosConsultados(obtenerRecurso());
+        }
+        else if (this.tp == tipoDeBusquedas.TIPO){
+            setRecursosConsultados(obtenerRecursoPorTipo(consulta));
+        }
+        else if(this.tp == tipoDeBusquedas.CAPACIDAD){
+            int capacidad = Integer.parseInt(consulta);
+            setRecursosConsultados(obtenerRecursoPorCapacidad(capacidad));
+        }
+        else{
+            setRecursosConsultados(obtenerRecursoPorUbicacion(consulta));
+        }
+    }
 
     public List<recurso> obtenerRecurso() throws PersistenceException{
         try{
@@ -58,7 +112,11 @@ public class recursoBean extends BasePageBean {
     }
 
 
+    public String getConsulta() {
+        return consulta;
+    }
 
-
-
+    public void setConsulta(String consulta) {
+        this.consulta = consulta;
+    }
 }

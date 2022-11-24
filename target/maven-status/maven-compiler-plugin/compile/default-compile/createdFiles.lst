@@ -17,6 +17,7 @@ biblioteca\backend\persistence\mybatisimpl\mappers\usuarioMapper.class
 biblioteca\backend\entities\usuario.class
 biblioteca\backend\managedbeans\BasePageBean.class
 biblioteca\backend\services\ExcepcionServiciosRecurso.class
+biblioteca\backend\entities\tipoDeBusquedas.class
 biblioteca\backend\services\impl\ServiciosUsuarioImpl.class
 biblioteca\backend\services\ServiciosUsuariosFactory.class
 biblioteca\backend\guice\GuiceContextListener.class
