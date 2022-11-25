@@ -72,7 +72,7 @@
         <p:commandButton value="Consultar"  actionListener="#{recurso.consulta}" update="recursos"></p:commandButton>
         <p:dataTable id="recursos"  var="r" value="#{recurso.getRecursosConsultados()}">
             <p:column headerText="Nombre">
-                <h:outputText value="#{r.nombre}" />
+                <p:commandLink value="#{r.nombre}"  onClick="#{recurso.buscar(r.nombre,r.tipo)}" />
             </p:column>
             <p:column headerText="ubicacion">
                 <h:outputText value="#{r.ubicacion}" />

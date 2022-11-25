@@ -119,4 +119,9 @@ public class recursoBean extends BasePageBean {
     public void setConsulta(String consulta) {
         this.consulta = consulta;
     }
+
+    public void buscar(String nombre, String tipo){
+        System.out.println(nombre);
+        System.out.println(tipo);
+    }
 }
