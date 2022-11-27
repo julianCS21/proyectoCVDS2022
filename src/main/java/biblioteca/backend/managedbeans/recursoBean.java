@@ -28,8 +28,11 @@ public class recursoBean extends BasePageBean {
     private List<recurso> recursosConsultados;
 
 
-    public List<recurso> getRecursosConsultados() {
-        return recursosConsultados;
+    public List<recurso> getRecursosConsultados() throws PersistenceException {
+        if(tp == tipoDeBusquedas.TODO){
+            this.recursosConsultados = obtenerRecurso();
+        }
+        return this.recursosConsultados;
     }
 
     public void setRecursosConsultados(List<recurso> recursosConsultados) {
