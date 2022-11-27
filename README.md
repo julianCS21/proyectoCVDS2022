@@ -29,7 +29,9 @@ lugar.
 
 ### Modelo E-R
 
-![image](https://user-images.githubusercontent.com/63822072/203641470-af8c7808-e7a4-423d-abe8-a0ecf16dde7f.png)
+![image](https://user-images.githubusercontent.com/63822072/204149789-fb942e22-b04c-44fb-8b7b-492fe120d9ca.png)
+
+### Diagrama de clases 
 
 ## Descripción de nuestro proceso:
 
