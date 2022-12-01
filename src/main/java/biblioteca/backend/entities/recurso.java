@@ -2,19 +2,19 @@ package biblioteca.backend.entities;
 
 public class recurso {
 
-    private int id;
+    protected int id;
 
-    private String nombre;
+    protected String nombre;
 
-    private String ubicacion;
+    protected String ubicacion;
     
-    private String tipo;
+    protected String tipo;
 
-    private int capacidad;
+    protected int capacidad;
 
-    private String descripcion;
+    protected String descripcion;
 
-    private int disponible;
+    protected int disponible;
 
 
 
@@ -27,6 +27,9 @@ public class recurso {
         this.descripcion = descripcion;
         this.disponible = disponible;
     }
+
+
+
 
     public String getTipo() {
         return tipo;

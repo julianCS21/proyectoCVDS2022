@@ -31,10 +31,36 @@
         WHERE r.ubicacion = #{ubicacion}
     </select>
     
+    <select id="consultarLibro" resultMap="libroResult">
+        SELECT *
+        FROM libros AS l JOIN recursos AS r ON l.id = r.id_recurso
+        WHERE l.titulo = #{titulo}
+    </select>
+
+
+    <select id="consultarComputador" resultMap="computadorResult">
+        SELECT *
+        FROM computadores AS c JOIN recursos AS r ON c.id = r.id_recurso
+        WHERE c.nombre = #{nombreComputador}
+    </select>
+
+
+    <select id="consultarSalaEstudio" resultMap="salaResult">
+        SELECT *
+        FROM sala_estudios AS s JOIN recursos AS r ON s.id = r.id_recurso
+        WHERE l.nombre = #{nombreSala}
+    </select>
+
+
+
+    
     <insert id="añadirRecurso" parameterType="map" >
         INSERT INTO recursos (id_recurso,nombre,ubicacion,tipo,capacidad,descripcion,disponible)
         VALUES (#{recurso.id},#{recurso.nombre},#{recurso.ubicacion},#{recurso.tipo},#{recurso.capacidad},#{recurso.descripcion},#{recurso.disponible})
     </insert>
+    
+
+
 
 
 
@@ -49,6 +75,20 @@
         <result property="descripcion" column="descripcion"/>
         <result property="disponible" column="disponible"/>
     </resultMap>
+
+
+    <resultMap id="libroResult" type="libro">
+        <result property="id" column="id_recurso"/>
+        <result property="nombre" column="nombre"/>
+        <result property="ubicacion" column="ubicacion"/>
+        <result property="tipo" column="tipo"/>
+        <result property="capacidad" column="capacidad"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="disponible" column="disponible"/>
+        <result property="titulo" column=""
+    </resultMap>
+
+
 
 
 
