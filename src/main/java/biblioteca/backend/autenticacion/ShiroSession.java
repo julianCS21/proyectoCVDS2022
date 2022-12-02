@@ -40,7 +40,6 @@ public class ShiroSession  implements SessionLogger{
             }
             else{
                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Aviso", "Usuario o contraseña incorrecta"));
-                System.out.println("jaja");
 
             }
         } catch (ExcepcionServiciosUsuario e) {

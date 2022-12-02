@@ -1,6 +1,9 @@
 package biblioteca.backend.persistence.mybatisimpl;
 
+import biblioteca.backend.entities.computador;
+import biblioteca.backend.entities.libro;
 import biblioteca.backend.entities.recurso;
+import biblioteca.backend.entities.salaEstudio;
 import biblioteca.backend.persistence.DaoRecurso;
 import biblioteca.backend.persistence.PersistenceException;
 import biblioteca.backend.persistence.mybatisimpl.mappers.recursoMapper;
@@ -55,6 +58,33 @@ public class MyBatisDAORecurso implements DaoRecurso {
             rm.añadirRecurso(r);
         }catch (Exception e){
             throw new PersistenceException("error al añadir  recurso:" + e.getLocalizedMessage(),e);
+        }
+    }
+
+    @Override
+    public libro loadBook(String nombreLibro) throws PersistenceException {
+        try {
+            return rm.consultarLibro(nombreLibro);
+        } catch (Exception e) {
+            throw new PersistenceException("error al consutlar libro:" + e.getLocalizedMessage(), e);
+        }
+    }
+
+    @Override
+    public computador loadPC(String nombreComputador) throws PersistenceException {
+        try {
+            return rm.consultarComputador(nombreComputador);
+        } catch (Exception e) {
+            throw new PersistenceException("error al consultar  computador:" + e.getLocalizedMessage(), e);
+        }
+    }
+
+    @Override
+    public salaEstudio loadStudyClass(String nombreSala) throws PersistenceException {
+        try {
+            return rm.consultarSalaEstudio(nombreSala);
+        } catch (Exception e) {
+            throw new PersistenceException("error al consultar  sala de estudio:" + e.getLocalizedMessage(), e);
         }
     }
 }
