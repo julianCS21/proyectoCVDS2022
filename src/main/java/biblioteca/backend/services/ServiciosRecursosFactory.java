@@ -39,7 +39,7 @@ public class ServiciosRecursosFactory {
                                           setClassPathResource("mybatis-config.xml");
                                           bind(ServiciosRecursos.class).to(ServiciosRecursoImpl.class);
                                           bind(DaoRecurso.class).to(MyBatisDAORecurso.class);
-                                          bind(SessionLogger.class).to(ShiroSession.class);
+                                          //bind(SessionLogger.class).to(ShiroSession.class);
 
                                       }
 

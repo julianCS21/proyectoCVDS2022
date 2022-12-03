@@ -1,25 +1,25 @@
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\PersistenceException.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\impl\ServiciosUsuarioImpl.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\autenticacion\ShiroSession.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursos.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\MyBatisDAOUsuario.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursosFactory.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\BasePageBean.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\recursoBean.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\DaoRecurso.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ExcepcionServiciosUsuario.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\usuarioBean.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosUsuarios.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\autenticacion\SessionLogger.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\usuario.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\MyBatisDAORecurso.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\administradorBean.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\mappers\usuarioMapper.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\impl\ServiciosRecursoImpl.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\mappers\recursoMapper.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ExcepcionServiciosRecurso.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\recurso.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\DaoUsuario.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\tipoDeBusquedas.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\guice\GuiceContextListener.java
-D:\Estudio\Julian_Castillo\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosUsuariosFactory.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosUsuarios.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\guice\GuiceContextListener.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\PersistenceException.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\recurso.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\mappers\usuarioMapper.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\mappers\recursoMapper.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\recursoBean.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\impl\ServiciosRecursoImpl.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ExcepcionServiciosUsuario.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\MyBatisDAORecurso.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosUsuariosFactory.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\administradorBean.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\DaoUsuario.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\autenticacion\SessionLogger.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\usuarioBean.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\tipoDeBusquedas.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursos.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\autenticacion\ShiroSession.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\managedbeans\BasePageBean.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ExcepcionServiciosRecurso.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\ServiciosRecursosFactory.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\DaoRecurso.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\services\impl\ServiciosUsuarioImpl.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\entities\usuario.java
+C:\Users\user\Dropbox\Trabajos\Séptimo semestre\CVDS\proyectoCVDS2022\src\main\java\biblioteca\backend\persistence\mybatisimpl\MyBatisDAOUsuario.java
