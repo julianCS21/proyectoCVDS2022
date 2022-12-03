@@ -1,7 +1,16 @@
-2022-12-02 22:53:52 jdbc[3]: exception
+2022-12-02 23:39:12 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "USUARIOS" not found; SQL statement:
 INSERT INTO USUARIOS (`carnet`, `nombre`, `correo`, `contraseña`, `rol`, `carrera`) VALUES (2167317, 'ejemplo-nombre', 'ejemplo-correo@mail.escuelaing.edu.co','123', 'usuario', 'Ingenieria de sistemas') [42102-191]
-2022-12-02 22:53:57 jdbc[6]: null
+2022-12-02 23:39:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:39:12 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+INSERT INTO RECURSOS (`id`, `nombre`, `ubicacion`, `tipo`, `capacidad`, `descripcion`, `disponible`) VALUES (1, 'ejemplo-nombre', 'ejemplo-ubicacion', 'ejemplo-tipo', 10, 'ejemplo-descripcion', 1) [42102-191]
+2022-12-02 23:39:12 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:39:17 jdbc[10]: null
 org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
 	at org.h2.message.DbException.get(DbException.java:179)
 	at org.h2.message.DbException.get(DbException.java:155)
@@ -12,8 +21,8 @@ org.h2.message.DbException: The connection was not closed by the application and
 	at org.h2.Driver.connect(Driver.java:72)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
-	at biblioteca.tests.ServicesJUnitTest.getConnection(ServicesJUnitTest.java:44)
-	at biblioteca.tests.ServicesJUnitTest.clearDB(ServicesJUnitTest.java:98)
+	at biblioteca.tests.ServicesJUnitTest.getConnection(ServicesJUnitTest.java:56)
+	at biblioteca.tests.ServicesJUnitTest.clearDB(ServicesJUnitTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,45 +54,324 @@ org.h2.message.DbException: The connection was not closed by the application and
 Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 39 more
-2022-12-02 22:56:13 jdbc[3]: exception
+2022-12-02 23:39:17 jdbc[10]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at biblioteca.tests.ServicesJUnitTest.getConnection(ServicesJUnitTest.java:56)
+	at biblioteca.tests.ServicesJUnitTest.clearDB(ServicesJUnitTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 39 more
+2022-12-02 23:39:17 jdbc[10]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at biblioteca.tests.ServicesJUnitTest.getConnection(ServicesJUnitTest.java:56)
+	at biblioteca.tests.ServicesJUnitTest.clearDB(ServicesJUnitTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 39 more
+2022-12-02 23:39:17 jdbc[10]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at biblioteca.tests.ServicesJUnitTest.getConnection(ServicesJUnitTest.java:56)
+	at biblioteca.tests.ServicesJUnitTest.clearDB(ServicesJUnitTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 39 more
+2022-12-02 23:39:17 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:41:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS ,[*]""CARNET"" INT(7) NOT NULL,""NOMBRE"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CORREO"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CONTRASEÑA"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""ROL"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""CARRERA"" VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (""CARNET"") USING BTREE, UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE COLLATE='latin1_swedish_ci' ENGINE=INNODB,
+ "; SQL statement:
+CREATE TABLE USUARIOS ,`carnet` INT(7) NOT NULL,`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (`carnet`) USING BTREE, UNIQUE INDEX `UK_correo` (`correo`) USING BTREE COLLATE='latin1_swedish_ci' ENGINE=InnoDB,
+ [42000-191]
+2022-12-02 23:41:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:41:18 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS ,[*]""CARNET"" INT(7) NOT NULL,""NOMBRE"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CORREO"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CONTRASEÑA"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""ROL"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""CARRERA"" VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (""CARNET"") USING BTREE, UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE COLLATE='latin1_swedish_ci' ENGINE=INNODB,
+ "; SQL statement:
+CREATE TABLE USUARIOS ,`carnet` INT(7) NOT NULL,`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (`carnet`) USING BTREE, UNIQUE INDEX `UK_correo` (`correo`) USING BTREE COLLATE='latin1_swedish_ci' ENGINE=InnoDB,
+ [42000-191]
+2022-12-02 23:41:18 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:41:18 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS ,[*]""CARNET"" INT(7) NOT NULL,""NOMBRE"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CORREO"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CONTRASEÑA"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""ROL"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""CARRERA"" VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (""CARNET"") USING BTREE, UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE COLLATE='latin1_swedish_ci' ENGINE=INNODB,
+ "; SQL statement:
+CREATE TABLE USUARIOS ,`carnet` INT(7) NOT NULL,`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (`carnet`) USING BTREE, UNIQUE INDEX `UK_correo` (`correo`) USING BTREE COLLATE='latin1_swedish_ci' ENGINE=InnoDB,
+ [42000-191]
+2022-12-02 23:41:18 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:43:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS ,[*]""CARNET"" INT(7) NOT NULL,""NOMBRE"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CORREO"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',""CONTRASEÑA"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""ROL"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',""CARRERA"" VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (""CARNET"") USING BTREE, UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE) COLLATE='latin1_swedish_ci' ENGINE=INNODB,
+ "; SQL statement:
+CREATE TABLE USUARIOS ,`carnet` INT(7) NOT NULL,`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci', PRIMARY KEY (`carnet`) USING BTREE, UNIQUE INDEX `UK_correo` (`correo`) USING BTREE) COLLATE='latin1_swedish_ci' ENGINE=InnoDB,
+ [42000-191]
+2022-12-02 23:43:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:45:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL COLLATE[*] 'latin1_swedish_ci',
+	""CORREO"" VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
+	""ROL"" VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
+	""CARRERA"" VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	PRIMARY KEY (""CARNET"") USING BTREE,
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=INNODB
+; "; expected "AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+	`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+	`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
+	`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
+	`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	PRIMARY KEY (`carnet`) USING BTREE,
+	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+; [42001-191]
+2022-12-02 23:45:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:47:34 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "USUARIOS" not found; SQL statement:
 INSERT INTO USUARIOS (`carnet`, `nombre`, `correo`, `contraseña`, `rol`, `carrera`) VALUES (2167317, 'ejemplo-nombre', 'ejemplo-correo@mail.escuelaing.edu.co','123', 'usuario', 'Ingenieria de sistemas') [42102-191]
-2022-12-02 22:59:24 jdbc[3]: exception
+2022-12-02 23:47:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:49:54 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "USUARIOS" not found; SQL statement:
 INSERT INTO USUARIOS (`carnet`, `nombre`, `correo`, `contraseña`, `rol`, `carrera`) VALUES (2167317, 'ejemplo-nombre', 'ejemplo-correo@mail.escuelaing.edu.co','123', 'usuario', 'Ingenieria de sistemas') [42102-191]
-2022-12-02 23:18:02 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:18:02 jdbc[5]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:18:02 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:19:44 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM 'RECURSOS'[*] "; expected "identifier"; SQL statement:
-delete from 'RECURSOS' [42001-191]
-2022-12-02 23:19:44 jdbc[5]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM 'RECURSOS'[*] "; expected "identifier"; SQL statement:
-delete from 'RECURSOS' [42001-191]
-2022-12-02 23:19:44 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM 'RECURSOS'[*] "; expected "identifier"; SQL statement:
-delete from 'RECURSOS' [42001-191]
-2022-12-02 23:20:58 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:20:58 jdbc[5]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:20:58 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:22:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:22:01 jdbc[5]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
-2022-12-02 23:22:01 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ""RECURSOS"" (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
-CREATE TABLE `RECURSOS` (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-02 23:49:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:51:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET"") USING BTREE,
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`) USING BTREE,
+	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-02 23:51:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:51:45 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET"") USING BTREE,
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`) USING BTREE,
+	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-02 23:51:45 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:51:45 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET"") USING BTREE,
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`) USING BTREE,
+	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-02 23:51:45 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-02 23:53:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (""CARNET"") USING[*] BTREE,
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") USING BTREE
+)
+ENGINE=INNODB
+; "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`carnet`) USING BTREE,
+	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-02 23:53:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]

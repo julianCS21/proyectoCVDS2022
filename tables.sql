@@ -13,14 +13,13 @@ CREATE TABLE `RECURSOS` (
 
 CREATE TABLE `USUARIOS` (
 	`carnet` INT(7) NOT NULL,
-	`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
-	`correo` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
-	`contraseña` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
-	`rol` VARCHAR(15) NOT NULL COLLATE 'latin1_swedish_ci',
-	`carrera` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
 	PRIMARY KEY (`carnet`) USING BTREE,
 	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
 )
-COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 ;
