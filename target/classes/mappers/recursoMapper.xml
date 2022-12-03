@@ -31,10 +31,61 @@
         WHERE r.ubicacion = #{ubicacion}
     </select>
     
+    <select id="consultarLibro" resultMap="libroResult">
+        SELECT r.id_recurso AS id,
+        r.nombre AS nombre,
+        r.ubicacion AS ubicacion,
+        r.tipo AS tipo,
+        r.capacidad AS capacidad,
+        r.descripcion AS descripcion,
+        r.disponible AS disponible,
+        l.titulo AS titulo,
+        l.autor AS autor
+        FROM libros AS l JOIN recursos AS r ON l.id = r.id_recurso
+        WHERE r.nombre = #{nombreLibro}
+    </select>
+
+
+    <select id="consultarComputador" resultMap="computadorResult">
+        SELECT r.id_recurso AS id,
+        r.nombre AS nombre,
+        r.ubicacion AS ubicacion,
+        r.tipo AS tipo,
+        r.capacidad AS capacidad,
+        r.descripcion AS descripcion,
+        r.disponible AS disponible,
+        c.marca AS marca,
+        c.descripcion AS descripcionComputador
+        FROM computadores AS c JOIN recursos AS r ON c.id = r.id_recurso
+        WHERE r.nombre = #{nombreComputador}
+    </select>
+
+
+    <select id="consultarSalaEstudio" resultMap="salaResult">
+        SELECT r.id_recurso AS id,
+        r.nombre AS nombre,
+        r.ubicacion AS ubicacion,
+        r.tipo AS tipo,
+        r.capacidad AS capacidad,
+        r.descripcion AS descripcion,
+        r.disponible AS disponible,
+        a.nombre AS nombreSala,
+        a.tamaño AS tamaño,
+        a.Descripcion AS descripcionSala
+        FROM sala_estudios AS a JOIN recursos AS r ON a.id = r.id_recurso
+        WHERE c.nombre = #{nombreSala}
+    </select>
+
+
+
+    
     <insert id="añadirRecurso" parameterType="map" >
         INSERT INTO recursos (id_recurso,nombre,ubicacion,tipo,capacidad,descripcion,disponible)
         VALUES (#{recurso.id},#{recurso.nombre},#{recurso.ubicacion},#{recurso.tipo},#{recurso.capacidad},#{recurso.descripcion},#{recurso.disponible})
     </insert>
+    
+
+
 
 
 
@@ -49,6 +100,48 @@
         <result property="descripcion" column="descripcion"/>
         <result property="disponible" column="disponible"/>
     </resultMap>
+
+
+    <resultMap id="libroResult" type="libro">
+        <result property="id" column="id_recurso"/>
+        <result property="nombre" column="nombre"/>
+        <result property="ubicacion" column="ubicacion"/>
+        <result property="tipo" column="tipo"/>
+        <result property="capacidad" column="capacidad"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="disponible" column="disponible"/>
+        <result property="titulo" column="titulo"/>
+        <result property="autor" column="autor"/>
+    </resultMap>
+
+
+    <resultMap id="computadorResult" type="computador">
+        <result property="id" column="id_recurso"/>
+        <result property="nombre" column="nombre"/>
+        <result property="ubicacion" column="ubicacion"/>
+        <result property="tipo" column="tipo"/>
+        <result property="capacidad" column="capacidad"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="disponible" column="disponible"/>
+        <result property="marca" column="marca"/>
+        <result property="descripcionComputador" column="descripcionComputador"/>
+    </resultMap>
+
+
+    <resultMap id="salaResult" type="salaEstudio">
+        <result property="id" column="id_recurso"/>
+        <result property="nombre" column="nombre"/>
+        <result property="ubicacion" column="ubicacion"/>
+        <result property="tipo" column="tipo"/>
+        <result property="capacidad" column="capacidad"/>
+        <result property="descripcion" column="descripcion"/>
+        <result property="disponible" column="disponible"/>
+        <result property="nombreSala" column="nombreSala"/>
+        <result property="tamaño" column="tamaño"/>
+        <result property="descripcionSala" column="descripcionSala"/>
+    </resultMap>
+
+
 
 
 

@@ -13,6 +13,9 @@
     <typeAliases>
         <typeAlias type="biblioteca.backend.entities.recurso" alias="recurso"/>
         <typeAlias type="biblioteca.backend.entities.usuario" alias="usuario"/>
+        <typeAlias type="biblioteca.backend.entities.libro" alias="libro"/>
+        <typeAlias type="biblioteca.backend.entities.salaEstudio" alias="salaEstudio"/>
+        <typeAlias type="biblioteca.backend.entities.computador" alias="computador"/>
     </typeAliases>
 
     <environments default="development">

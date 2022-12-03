@@ -86,12 +86,15 @@ button.ui-button{
   </style>
 </h:head>
 <h:body>
+    <f:metadata>
+        <f:viewParam name="inicioSesion" value="#{usuario.inicioSesion}"/>
+    </f:metadata>
     <div class="menu">
         <div class="fondo">
             <img src="logo2.png" alt="logo" class="logo"></img>
             <h1 class="titulo">Iniciar sesión</h1>
             <p class="subtitulo">Ingresa cuenta personal para solicitar o cuenta de administrador: </p>
-
+            <h:outputText value="#{usuario.verificarLogueo()}" />
             <h:form id="usuarios" class="form">
                 <label class="label">Usuario</label>
                 <p:inputText type="text" id="Usuario" placeholder="ejemplo@mail.escuelaing.edu.co" class="input input-user" value="#{usuario.correo}"></p:inputText>

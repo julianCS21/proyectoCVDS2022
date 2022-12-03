@@ -7,9 +7,11 @@ import java.io.IOException;
 public interface SessionLogger {
 
 
-    void login(String correo, String contraseña) throws PersistenceException, IOException;
+
 
     public boolean isLogged();
 
     public void logout();
+
+    boolean login(String correo, String contraseña) throws PersistenceException,IOException;
 }

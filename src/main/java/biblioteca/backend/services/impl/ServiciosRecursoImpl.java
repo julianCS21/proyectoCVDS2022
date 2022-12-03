@@ -1,7 +1,10 @@
 package biblioteca.backend.services.impl;
 
 
+import biblioteca.backend.entities.computador;
+import biblioteca.backend.entities.libro;
 import biblioteca.backend.entities.recurso;
+import biblioteca.backend.entities.salaEstudio;
 import biblioteca.backend.persistence.DaoRecurso;
 import biblioteca.backend.persistence.PersistenceException;
 import biblioteca.backend.services.ExcepcionServiciosRecurso;
@@ -69,5 +72,35 @@ public class ServiciosRecursoImpl  implements ServiciosRecursos {
 
         }
 
+    }
+
+    @Override
+    public libro consultarLibro(String nombreLibro) throws ExcepcionServiciosRecurso {
+        try{
+            return daoRecurso.loadBook(nombreLibro);
+        } catch (PersistenceException ex) {
+            throw new ExcepcionServiciosRecurso("Error al consultar :"+ex.getLocalizedMessage(), ex);
+
+        }
+    }
+
+    @Override
+    public computador consultarComputador(String nombreComputador) throws ExcepcionServiciosRecurso {
+        try{
+            return daoRecurso.loadPC(nombreComputador);
+        } catch (PersistenceException ex) {
+            throw new ExcepcionServiciosRecurso("Error al consultar :"+ex.getLocalizedMessage(), ex);
+
+        }
+    }
+
+    @Override
+    public salaEstudio consultarSalaEstudio(String nombreSala) throws ExcepcionServiciosRecurso {
+        try{
+            return daoRecurso.loadStudyClass(nombreSala);
+        } catch (PersistenceException ex) {
+            throw new ExcepcionServiciosRecurso("Error al consultar :"+ex.getLocalizedMessage(), ex);
+
+        }
     }
 }
