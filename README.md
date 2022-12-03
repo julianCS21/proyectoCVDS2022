@@ -33,6 +33,9 @@ lugar.
 
 ### Diagrama de clases 
 
+![image](https://user-images.githubusercontent.com/63822072/205417374-f32c713c-1f5a-4ba5-9b52-f5b54cc2aa72.png)
+
+
 ## Descripción de nuestro proceso:
 
 ### Metodología.
