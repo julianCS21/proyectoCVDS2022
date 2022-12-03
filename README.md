@@ -107,6 +107,8 @@ ni la puntuación.
 Debido a que no conociamos muy bien como manejar esta herramienta, al finalizar el primer sprint no acabamos como tal lo que se había 
 prometido y quedó faltando 2 tareas asignadas. 
 
+### Vistas del primer sprint 
+
 ### SPRINT NUMERO 2
 
 Para el segundo Sprint se realizó nuevamente una reunión, donde nos comprometimos a desarrollar tres historia de usuario, para un total de 20 puntos.
