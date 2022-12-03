@@ -501,3 +501,18 @@ CREATE TABLE 'RECURSOS' (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(4
 2022-12-03 00:21:44 jdbc[8]: exception
 org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
 delete from RECURSOS [42102-191]
+2022-12-03 00:34:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:34:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+INSERT INTO RECURSOS (`id`, `nombre`, `ubicacion`, `tipo`, `capacidad`, `descripcion`, `disponible`) VALUES (1, 'ejemplo-nombre', 'ejemplo-ubicacion', 'ejemplo-tipo', 10, 'ejemplo-descripcion', 1) [42102-191]
+2022-12-03 00:34:27 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:37:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:37:57 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
