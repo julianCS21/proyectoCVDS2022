@@ -131,3 +131,12 @@ El backlog en Azure DevOps se visualiza así:
 ![image](https://user-images.githubusercontent.com/63822072/203646561-6312e785-c3ee-4d78-aceb-367479fe336b.png)
 
 
+### Vistas 
+
+![image](https://user-images.githubusercontent.com/63822072/205439893-fe7c2901-02b7-499e-af79-19e25eb9ea17.png)
+
+![image](https://user-images.githubusercontent.com/63822072/205439907-51a2c398-59e9-441c-a8cb-abe76f3c08ae.png)
+
+![image](https://user-images.githubusercontent.com/63822072/205439918-6cc487bd-1c15-41bc-a27e-6069c317373a.png)
+
+
