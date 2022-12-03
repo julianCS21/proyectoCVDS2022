@@ -33,6 +33,9 @@ lugar.
 
 ### Diagrama de clases 
 
+![image](https://user-images.githubusercontent.com/63822072/205417374-f32c713c-1f5a-4ba5-9b52-f5b54cc2aa72.png)
+
+
 ## Descripción de nuestro proceso:
 
 ### Metodología.
@@ -103,6 +106,8 @@ la herramienta de gestión de proyecto de Azure DevOps, debido a este problema e
 ni la puntuación.
 Debido a que no conociamos muy bien como manejar esta herramienta, al finalizar el primer sprint no acabamos como tal lo que se había 
 prometido y quedó faltando 2 tareas asignadas. 
+
+### Vistas del primer sprint 
 
 ### SPRINT NUMERO 2
 
