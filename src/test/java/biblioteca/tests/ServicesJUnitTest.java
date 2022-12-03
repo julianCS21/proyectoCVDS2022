@@ -44,19 +44,7 @@ public class ServicesJUnitTest {
     public void setUp() throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:file:./target/db/testdb;MODE=MYSQL", "anonymous", "anonymous");
         Statement stmt = conn.createStatement();
-        //stmt.execute ("CREATE TABLE RECURSOS (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB;");
-        stmt.execute("CREATE TABLE USUARIOS (\n" +
-                "\t`carnet` INT(7) NOT NULL,\n" +
-                "\t`nombre` VARCHAR(50) NOT NULL ,\n" +
-                "\t`correo` VARCHAR(50) NOT NULL ,\n" +
-                "\t`contraseña` VARCHAR(15) NOT NULL,\n" +
-                "\t`rol` VARCHAR(15) NOT NULL ,\n" +
-                "\t`carrera` VARCHAR(50) NULL DEFAULT NULL,\n" +
-                "\tPRIMARY KEY (`carnet`) USING BTREE,\n" +
-                "\tUNIQUE INDEX `UK_correo` (`correo`) USING BTREE\n" +
-                ")\n" +
-                "ENGINE=InnoDB\n" +
-                ";");
+        stmt.execute ("CREATE TABLE 'RECURSOS' (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB;");
         conn.commit();
         conn.close();
 

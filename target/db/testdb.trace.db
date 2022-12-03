@@ -375,3 +375,129 @@ ENGINE=InnoDB
 2022-12-02 23:53:26 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
 delete from RECURSOS [42102-191]
+2022-12-03 00:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET""),
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") 
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`),
+	UNIQUE INDEX `UK_correo` (`correo`) 
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-03 00:18:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:18:12 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET""),
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") 
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`),
+	UNIQUE INDEX `UK_correo` (`correo`) 
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-03 00:18:12 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:18:12 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE USUARIOS (
+	""CARNET"" INT(7) NOT NULL,
+	""NOMBRE"" VARCHAR(50) NOT NULL ,
+	""CORREO"" VARCHAR(50) NOT NULL ,
+	""CONTRASEÑA"" VARCHAR(15) NOT NULL,
+	""ROL"" VARCHAR(15) NOT NULL ,
+	""CARRERA"" VARCHAR(50) NULL DEFAULT,[*]
+	PRIMARY KEY (""CARNET""),
+	UNIQUE INDEX ""UK_CORREO"" (""CORREO"") 
+)
+ENGINE=INNODB
+; "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM"; SQL statement:
+CREATE TABLE USUARIOS (
+	`carnet` INT(7) NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL ,
+	`correo` VARCHAR(50) NOT NULL ,
+	`contraseña` VARCHAR(15) NOT NULL,
+	`rol` VARCHAR(15) NOT NULL ,
+	`carrera` VARCHAR(50) NULL DEFAULT,
+	PRIMARY KEY (`carnet`),
+	UNIQUE INDEX `UK_correo` (`correo`) 
+)
+ENGINE=InnoDB
+; [42001-191]
+2022-12-03 00:18:12 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:19:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+INSERT INTO RECURSOS (`id`, `nombre`, `ubicacion`, `tipo`, `capacidad`, `descripcion`, `disponible`) VALUES (1, 'ejemplo-nombre', 'ejemplo-ubicacion', 'ejemplo-tipo', 10, 'ejemplo-descripcion', 1) [42102-191]
+2022-12-03 00:19:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:20:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE RECURSOS (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE RECURSOS (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:20:09 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:20:09 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE RECURSOS (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE RECURSOS (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:20:09 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:20:09 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE RECURSOS (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE[*]=INNODB; "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE RECURSOS (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:20:09 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:21:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE 'RECURSOS'[*] (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE=INNODB; "; expected "identifier"; SQL statement:
+CREATE TABLE 'RECURSOS' (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:21:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:21:44 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE 'RECURSOS'[*] (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE=INNODB; "; expected "identifier"; SQL statement:
+CREATE TABLE 'RECURSOS' (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:21:44 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]
+2022-12-03 00:21:44 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE 'RECURSOS'[*] (""ID"" INT(11) NOT NULL AUTO_INCREMENT,""NOMBRE"" VARCHAR(45) NOT NULL,""UBICACION"" VARCHAR(45) NOT NULL,""TIPO"" VARCHAR(45) NOT NULL,""CAPACIDAD"" INT(11) NOT NULL,""DESCRIPCION"" VARCHAR(45) NOT NULL,""DISPONIBLE"" INT(2) NOT NULL, PRIMARY KEY (""ID"",""NOMBRE"") ENGINE=INNODB; "; expected "identifier"; SQL statement:
+CREATE TABLE 'RECURSOS' (`id` int(11) NOT NULL AUTO_INCREMENT,`nombre` varchar(45) NOT NULL,`ubicacion` varchar(45) NOT NULL,`tipo` varchar(45) NOT NULL,`capacidad` int(11) NOT NULL,`descripcion` varchar(45) NOT NULL,`disponible` int(2) NOT NULL, PRIMARY KEY (`id`,`nombre`) ENGINE=InnoDB; [42001-191]
+2022-12-03 00:21:44 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "RECURSOS" not found; SQL statement:
+delete from RECURSOS [42102-191]

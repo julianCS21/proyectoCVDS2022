@@ -18,8 +18,6 @@ CREATE TABLE `USUARIOS` (
 	`contraseña` VARCHAR(15) NOT NULL,
 	`rol` VARCHAR(15) NOT NULL ,
 	`carrera` VARCHAR(50) NULL DEFAULT,
-	PRIMARY KEY (`carnet`) USING BTREE,
-	UNIQUE INDEX `UK_correo` (`correo`) USING BTREE
-)
-ENGINE=InnoDB
-;
+	PRIMARY KEY (`carnet`),
+	UNIQUE INDEX `UK_correo` (`correo`)
+) ENGINE=InnoDB ;
