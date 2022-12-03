@@ -27,6 +27,28 @@ public class recursoBean extends BasePageBean {
 
     private List<recurso> recursosConsultados;
 
+    private String tipo;
+
+    private String nombreRecurso;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getNombreRecurso() {
+        return nombreRecurso;
+    }
+
+    public void setNombreRecurso(String nombreRecurso) {
+        this.nombreRecurso = nombreRecurso;
+    }
+
+
+
 
     public List<recurso> getRecursosConsultados() throws PersistenceException {
         if(tp == tipoDeBusquedas.TODO){
@@ -123,8 +145,9 @@ public class recursoBean extends BasePageBean {
         this.consulta = consulta;
     }
 
-    public void buscar(String nombre, String tipo){
-        System.out.println(nombre);
-        System.out.println(tipo);
-    }
+
+
+
+
+
 }

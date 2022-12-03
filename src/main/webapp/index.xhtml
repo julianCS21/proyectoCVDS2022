@@ -85,27 +85,26 @@ p{
   </style>
 </h:head>
 <h:body>
-<div class="menu">
-<div class="fondo">
-    <img src="logo2.png" alt="logo" class="logo"></img>
-    <h1 class="titulo">Biblioteca de recursos</h1>
-    <p class="subtitulo">Seleccione una Opción:</p>
-    <div class="botones">
-<!--        <p:link outcome="consultarRecurso.xhtml"><p:commandButton value="Consultar" class="botonuno"> </p:commandButton></p:link>-->
-<!--        <p:link outcome="login.xhtml"><p:commandButton value="Iniciar sesión" class="boton2"></p:commandButton></p:link>-->
-        <button class="Otros">
-            <a href="/faces/consultarRecurso.xhtml">
-                <p>Consultar Recurso</p>
-            </a>
-        </button>
-        <button class="Otros">
-            <a href="/faces/login.xhtml">
-                <p>Iniciar Sesión</p>
-            </a>
-        </button>
 
+
+    <div class="menu">
+        <div class="fondo">
+            <img src="logo2.png" alt="logo" class="logo"></img>
+            <h1 class="titulo">Biblioteca de recursos</h1>
+            <p class="subtitulo">Seleccione una Opción:</p>
+            <div class="botones">
+                <button class="Otros">
+                    <a href="/faces/consultarRecurso.xhtml">
+                        <p>Consultar Recurso</p>
+                    </a>
+                </button>
+                <button class="Otros">
+                    <a href="/faces/login.xhtml?inicioSesion=true">
+                        <p>Iniciar Sesión</p>
+                    </a>
+                </button>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
 </h:body>
 </html>

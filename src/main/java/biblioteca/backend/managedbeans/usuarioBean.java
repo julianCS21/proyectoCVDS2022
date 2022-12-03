@@ -48,24 +48,37 @@ public class usuarioBean extends BasePageBean {
         this.correo = correo;
     }
 
-    public ServiciosUsuarios getSu() {
-        return su;
-    }
-
-    public void setSu(ServiciosUsuarios su) {
-        this.su = su;
-    }
 
 
 
-    @Inject
-    private ServiciosUsuarios su;
+
+
 
     @Inject
     private SessionLogger sl;
 
+    public boolean isInicioSesion() {
+        return inicioSesion;
+    }
+
+    public void setInicioSesion(boolean inicioSesion) {
+        this.inicioSesion = inicioSesion;
+    }
+
+    private boolean inicioSesion = true;
+
+
+
     public void login() throws PersistenceException, IOException {
-        sl.login(correo,contraseña);
+        setInicioSesion(sl.login(correo,contraseña));
+    }
+
+
+    public String verificarLogueo(){
+        if(!inicioSesion){
+            return "usuario o contraseña incorrecta,verifique los datos";
+        }
+        return "";
     }
 
 }

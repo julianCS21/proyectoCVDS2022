@@ -20,7 +20,7 @@ public class ShiroSession  implements SessionLogger{
 
 
     @Override
-    public void login(String correo, String contraseña) throws PersistenceException, IOException {
+    public boolean login(String correo, String contraseña) throws PersistenceException, IOException {
         try {
             usuario us = su.obtenerUsuarioxEmail(correo);
             boolean vali = false;
@@ -37,15 +37,18 @@ public class ShiroSession  implements SessionLogger{
                 else{
                     FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/usuario.xhtml?faces-redirect=true");
                 }
+                return true;
             }
             else{
-                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Aviso", "Usuario o contraseña incorrecta"));
+                FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/login.xhtml?faces-redirect=true&inicioSesion=false");
 
             }
         } catch (ExcepcionServiciosUsuario e) {
             throw new RuntimeException(e);
         }
+        return false;
     }
+
 
 
 

@@ -1,11 +1,13 @@
 biblioteca\backend\persistence\PersistenceException.class
 biblioteca\backend\autenticacion\SessionLogger.class
+biblioteca\backend\entities\salaEstudio.class
 biblioteca\backend\persistence\mybatisimpl\MyBatisDAORecurso.class
 biblioteca\backend\entities\recurso.class
 biblioteca\backend\persistence\DaoRecurso.class
 biblioteca\backend\persistence\mybatisimpl\MyBatisDAOUsuario.class
 biblioteca\backend\services\ServiciosRecursosFactory$1.class
 biblioteca\backend\persistence\DaoUsuario.class
+biblioteca\backend\entities\libro.class
 biblioteca\backend\guice\GuiceContextListener$1.class
 biblioteca\backend\services\ServiciosUsuarios.class
 biblioteca\backend\services\ServiciosUsuariosFactory$1.class
@@ -23,6 +25,7 @@ biblioteca\backend\services\ServiciosUsuariosFactory.class
 biblioteca\backend\guice\GuiceContextListener.class
 biblioteca\backend\services\ExcepcionServiciosUsuario.class
 biblioteca\backend\services\impl\ServiciosRecursoImpl.class
+biblioteca\backend\entities\computador.class
 biblioteca\backend\services\ServiciosRecursosFactory.class
 biblioteca\backend\persistence\mybatisimpl\mappers\recursoMapper.class
 biblioteca\backend\managedbeans\usuarioBean.class
